@@ -5,7 +5,7 @@ import 'bootstrap';
 const toDolist = document.getElementById('toDoList');
 const addBtn = document.getElementById('addBtn');
 const inputs = document.getElementsByClassName('forminput');
-const listArray = [
+let listArray = [
   {
     description: 'AddList',
     completed: false,
