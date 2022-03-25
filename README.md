@@ -4,10 +4,7 @@
 
 To Do List project
 
-![Screenshot](https://user-images.githubusercontent.com/77942746/155784190-5e354906-728a-45e2-8ae0-591108da570f.png)
-
-![Screenshot](https://user-images.githubusercontent.com/77942746/155784255-e770e582-fbb2-4ac6-9983-f39899ea185f.png)
-
+![Screenshot](https://user-images.githubusercontent.com/77942746/160038010-4daf5616-77c7-45bf-a30a-ddef01c8a516.png)
 
 ## Built With
 
