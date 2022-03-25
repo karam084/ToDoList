@@ -5,7 +5,28 @@ import 'bootstrap';
 const toDolist = document.getElementById('toDoList');
 const addBtn = document.getElementById('addBtn');
 const inputs = document.getElementsByClassName('forminput');
-let listArray = [];
+const listArray = [
+  {
+    description: 'AddList',
+    completed: false,
+    index: 1,
+  },
+  {
+    description: 'RemoveList',
+    completed: true,
+    index: 2,
+  },
+  {
+    description: 'ClearAllList',
+    completed: false,
+    index: 3,
+  },
+  {
+    description: 'reunServer',
+    completed: true,
+    index: 4,
+  },
+];
 
 function addList() {
   const listarr = {
@@ -20,7 +41,7 @@ function displayData() {
     trs += `<tr>
      <td><input type="checkbox"></td>
     <td class="float-left">${listArray[i].name}</td>
-    <td><button onclick="deleteList(${i})" class="float-right"><i class="fa fa-ellipsis-v"></i></button></td>
+    <td><button onclick="deleteList(${i})" class="float-right mt-lg-1"><i class="fa fa-ellipsis-v"></i></button></td>
     </tr>`;
   }
   document.getElementById('tableBody').innerHTML = trs;

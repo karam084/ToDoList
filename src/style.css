@@ -1,19 +1,13 @@
 .fa {
   margin-left: 65%;
+  color: black;
 }
 
 .float-left {
   position: absolute;
-  left: 175px;
-}
-
-h2 {
-  color: gray;
-  margin-left: 40%;
-  margin-top: 10%;
-  font-size: 16px;
+  left: 160px;
 }
 
 .float-right {
-  margin-left: 30rem;
+  margin-left: 95%;
 }

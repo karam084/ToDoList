@@ -11,9 +11,9 @@
 @import '~bootstrap/scss/grid';
 
 $font: 'Karla', sans-serif;
-$primary-color: #3e6f9e;
+$primary-color: black;
 
 body {
   font-family: $font;
-  color: $primary-color;
+  $primary-color: black;
 }
