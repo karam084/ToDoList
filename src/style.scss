@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:weight@400;700&display=swap');
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+// Optional
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/type';
+@import '~bootstrap/scss/images';
+@import '~bootstrap/scss/grid';
+
+$font: 'Karla', sans-serif;
+$primary-color: #3e6f9e;
+
+body {
+  font-family: $font;
+  color: $primary-color;
+}

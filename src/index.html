@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <title>To Do List</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./bootstrap-4.0.0-dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../src/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container p-5">
+      <div class="form-inputs">
+        <div class="input-gp mb-2 w-75">
+          <label>Today's To Do</label
+          ><a href="index.html"> <i class="fa fa-refresh"></i></a>
+          <br />
+          <input
+            id="toDoList"
+            class="d-inline p-2 w-75 forminput"
+            placeholder="Add to your list..."
+          />
+          <button id="addBtn" class="btn btn-primary-white d-inline p-2">
+            <i class="fa fa-chevron-left"></i>
+          </button>
+        </div>
+      </div>
+      <div class="data p-3 w-50">
+        <table class="table table-striped">
+          <thead></thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+      <div class="data p-3 w-50">
+        <h2>Clear all completed</h2>
+      </div>
+    </div>
+    <script src="../src/index.js"></script>
+  </body>
+</html>
