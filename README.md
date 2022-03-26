@@ -1,13 +1,6 @@
-![](https://github.com/karam084/online-courses-capstone)
+# To Do List
 
-# Project Name
-
-To Do List project
-
-![Screenshot](https://user-images.githubusercontent.com/77942746/155784190-5e354906-728a-45e2-8ae0-591108da570f.png)
-
-![Screenshot](https://user-images.githubusercontent.com/77942746/155784255-e770e582-fbb2-4ac6-9983-f39899ea185f.png)
-
+![Screenshot](https://user-images.githubusercontent.com/77942746/160253835-c04ca2a5-93b9-4d84-9a62-1daaa6921eeb.png)
 
 ## Built With
 
@@ -16,9 +9,17 @@ To Do List project
 - Visual studio and github
 - Webpack
 
+## Run project
+
+- Install npm
+- Insall node-modules
+- Install webpak package
+- run npm build
+- run npm start for local server
+
 ## Source code
 
-[source code](https://github.com/karam084/to_do_list)
+[source code](https://github.com/karam084/ToDoList)
 
 👤 **Author**
 
