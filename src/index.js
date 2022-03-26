@@ -1,7 +1,7 @@
 import './style.css';
 import './style.scss';
 import 'bootstrap';
-import { todoItems } from './modules/task';
+
 const createNewTaskElement = function todoItems(taskString) {
   const listItem = document.createElement('li');
   const checkBox = document.createElement('input');
