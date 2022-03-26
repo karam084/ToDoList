@@ -1,8 +1,6 @@
-![](https://github.com/karam084/online-courses-capstone)
-
 # To Do List
 
-![Screenshot](https://user-images.githubusercontent.com/77942746/160130671-89a11ea9-3ca3-4065-958f-c7b559c55e47.png)
+![Screenshot](https://user-images.githubusercontent.com/77942746/160253835-c04ca2a5-93b9-4d84-9a62-1daaa6921eeb.png)
 
 ## Built With
 

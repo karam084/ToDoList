@@ -1,71 +1,91 @@
 import './style.css';
 import './style.scss';
 import 'bootstrap';
+import { todoItems } from './modules/task';
+const createNewTaskElement = function todoItems(taskString) {
+  const listItem = document.createElement('li');
+  const checkBox = document.createElement('input');
+  const label = document.createElement('label');
+  const editInput = document.createElement('input');
+  const editButton = document.createElement('button');
 
-const toDolist = document.getElementById('toDoList');
-const addBtn = document.getElementById('addBtn');
-const inputs = document.getElementsByClassName('forminput');
-let listArray = [
-  {
-    description: 'AddList',
-    completed: false,
-    index: 1,
-  },
-  {
-    description: 'RemoveList',
-    completed: true,
-    index: 2,
-  },
-  {
-    description: 'ClearAllList',
-    completed: false,
-    index: 3,
-  },
-  {
-    description: 'reunServer',
-    completed: true,
-    index: 4,
-  },
-];
+  const deleteButton = document.createElement('button');
 
-function addList() {
-  const listarr = {
-    name: toDolist.value,
+  label.innerText = taskString;
+
+  checkBox.type = 'checkbox';
+  editInput.type = 'text';
+
+  editButton.innerText = 'Edit';
+  editButton.className = 'edit';
+  deleteButton.innerText = 'Delete';
+  deleteButton.className = 'delete';
+
+  listItem.appendChild(checkBox);
+  listItem.appendChild(label);
+  listItem.appendChild(editInput);
+  listItem.appendChild(editButton);
+  listItem.appendChild(deleteButton);
+  return listItem;
+};
+const taskInput = document.getElementById('new-task');
+document.getElementById('title').textContent = "Today's To Do";
+const addButton = document.getElementsByTagName('button')[0];
+const incompleteTaskHolder = document.getElementById('incomplete-tasks');
+const completedTasksHolder = document.getElementById('completed-tasks');
+const bindTaskEvents = function ckecks(taskListItem, checkBoxEventHandler) {
+  const checkBox = taskListItem.querySelector('input[type=checkbox]');
+  const editButton = taskListItem.querySelector('button.edit');
+  const deleteButton = taskListItem.querySelector('button.delete');
+  const editTask = function taks() {
+    const listItem = this.parentNode;
+    const editInput = listItem.querySelector('input[type=text]');
+    const label = listItem.querySelector('label');
+    const containsClass = listItem.classList.contains('editMode');
+    if (containsClass) {
+      label.innerText = editInput.value;
+    } else {
+      editInput.value = label.innerText;
+    }
+
+    listItem.classList.toggle('editMode');
   };
-  listArray.push(listarr);
-}
-
-function displayData() {
-  let trs = '';
-  for (let i = 0; i < listArray.length; i += 1) {
-    trs += `<tr>
-     <td><input type="checkbox"></td>
-    <td class="float-left">${listArray[i].name}</td>
-    <td><button onclick="deleteList(${i})" class="float-right mt-lg-1"><i class="fa fa-ellipsis-v"></i></button></td>
-    </tr>`;
-  }
-  document.getElementById('tableBody').innerHTML = trs;
-}
-function clearForm() {
-  for (let i = 0; i < inputs.length; i += 1) {
-    inputs[i].value = '';
-  }
-}
-
-addBtn.onclick = () => {
-  addList();
-  displayData();
-  clearForm();
+  const deleteTask = function parent() {
+    const listItem = this.parentNode;
+    const ul = listItem.parentNode;
+    ul.removeChild(listItem);
+  };
+  editButton.onclick = editTask;
+  deleteButton.onclick = deleteTask;
+  checkBox.onchange = checkBoxEventHandler;
 };
 
-function deleteList(...index) {
-  listArray.splice(...index, 1);
-  localStorage.setItem('toDolist', JSON.stringify(listArray));
-  displayData();
-}
-deleteList();
+const taskCompleted = function complate() {
+  const listItem = this.parentNode;
+  completedTasksHolder.appendChild(listItem);
+  bindTaskEvents(listItem, taskCompleted);
+};
+const taskIncomplete = function incomplate() {
+  const listItem = this.parentNode;
+  incompleteTaskHolder.appendChild(listItem);
+  bindTaskEvents(listItem, taskIncomplete);
+};
+const addTask = function addTask() {
+  const listItem = createNewTaskElement(taskInput.value);
+  incompleteTaskHolder.appendChild(listItem);
+  bindTaskEvents(listItem, taskCompleted);
 
-if (JSON.parse(localStorage.getItem('toDolist')) != null) {
-  listArray = JSON.parse(localStorage.getItem('toDolist'));
-  displayData();
+  taskInput.value = '';
+};
+
+const ajaxRequest = function clicks() {};
+addButton.onclick = addTask;
+addButton.addEventListener('click', addTask);
+addButton.addEventListener('click', ajaxRequest);
+
+for (let i = 0; i < incompleteTaskHolder.children.length; i += 1) {
+  bindTaskEvents(incompleteTaskHolder.children[i], taskCompleted);
+}
+for (let i = 0; i < completedTasksHolder.children.length; i += 1) {
+  bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
 }
