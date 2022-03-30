@@ -18,22 +18,18 @@
   </head>
   <body>
     <div class="container w-50">
-      <p>
-        <label for="new-task" id="title"></label>
-        <input id="new-task" type="text" placeholder="Add to your list..." />
-        <button>Add</button>
-      </p>
-      <ul id="incomplete-tasks" class="sortlist">
-        <li></li>
-        <li></li>
+      <div>
+        <label for="new-task">Today's To Do List</label
+        ><input id="new-task" type="text" /><button>Add</button>
+      </div>
+      <h3>Todo List</h3>
+      <ul id="incomplete-tasks">
+        <li class="editMode"></li>
       </ul>
 
       <h3>Completed</h3>
-      <ul id="completed-tasks" class="complated">
-        <li></li>
-      </ul>
-      <button id="clear" class="delete">Clear complated</button>
+      <ul id="completed-tasks"></ul>
     </div>
-    <script src="../src/index.js"></script>
+    <script src="../src/index.js" type="module"></script>
   </body>
 </html>
