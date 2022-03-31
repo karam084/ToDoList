@@ -51,7 +51,6 @@ function newFunction() {
   };
 }
 localStorage.setItem('containsClass', JSON.stringify(listItem.todoItems));
-
 if (JSON.parse(localStorage.getItem('todoItems')) != null) {
   listItem.todoItems = JSON.parse(localStorage.getItem('containsClass'));
 }

@@ -11,6 +11,7 @@ import {
   taskIncomplete,
 } from './taskInput.js';
 import listItem from './listItem.js';
+import todoItems from './modules/task';
 
 addButton.addEventListener('click', addTask);
 
@@ -23,3 +24,4 @@ for (let i = 0; i < completedTasksHolder.children.length; i += 1) {
 }
 
 listItem();
+todoItems();
