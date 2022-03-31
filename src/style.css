@@ -46,6 +46,7 @@ button {
 button:hover {
   color: #333;
 }
+
 /* Heading */
 
 h3,
@@ -70,6 +71,16 @@ input[type='text'] {
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
+}
+
+li > input[type='text'] {
+  width: 226px;
+}
+
+/* Edit Task */
+
+ul li input[type='text'] {
+  display: none;
 }
 
 input[type='text']:focus {
@@ -113,12 +124,12 @@ li > label {
   padding: 0 0 0 11px;
 }
 
-li > input[type='text'] {
-  width: 226px;
-}
-
 li > .delete:hover {
   color: #cf2323;
+}
+
+ul li.editMode label {
+  display: none;
 }
 
 /* Completed */
@@ -128,16 +139,6 @@ li > .delete:hover {
   color: #888;
 }
 
-/* Edit Task */
-
-ul li input[type='text'] {
-  display: none;
-}
-
 ul li.editMode input[type='text'] {
   display: block;
-}
-
-ul li.editMode label {
-  display: none;
 }

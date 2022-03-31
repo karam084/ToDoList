@@ -22,7 +22,4 @@ for (let i = 0; i < completedTasksHolder.children.length; i += 1) {
   bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
 }
 
-if (JSON.parse(localStorage.getItem('')) != null) {
-  listItem = JSON.parse(localStorage.getItem('button'));
-}
 listItem();
