@@ -5,6 +5,10 @@ const deleteTask = function () {
   todoItems.listItem = this.parentNode;
   const ul = todoItems.listItem.parentNode;
   ul.removeChild(todoItems.listItem);
+  localStorage.setItem('deleteTask', JSON.stringify(listItem.todoItems));
 };
+if (JSON.parse(localStorage.getItem('todoItems')) != null) {
+  listItem.todoItems = JSON.parse(localStorage.getItem('deleteTask'));
+}
 
 export default deleteTask;

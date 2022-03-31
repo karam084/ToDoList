@@ -4,8 +4,7 @@ import listItem from './listItem.js';
 
 export const taskInput = document.getElementById('new-task');
 export const addButton = document.getElementsByTagName('button')[0];
-export const incompleteTasksHolder =
-  document.getElementById('incomplete-tasks');
+export const incompleteTasksHolder = document.getElementById('incomplete-tasks');
 export const completedTasksHolder = document.getElementById('completed-tasks');
 
 export const createNewTaskElement = (...taskString) => {
@@ -51,11 +50,11 @@ function newFunction() {
     todoItems.listItem.classList.toggle('editMode');
   };
 }
-// localStorage.setItem('containsClass', JSON.stringify(listItem.todoItems));
+localStorage.setItem('containsClass', JSON.stringify(listItem.todoItems));
 
-// if (JSON.parse(localStorage.getItem('todoItems')) != null) {
-//   listItem.todoItems = JSON.parse(localStorage.getItem('containsClass'));
-// }
+if (JSON.parse(localStorage.getItem('todoItems')) != null) {
+  listItem.todoItems = JSON.parse(localStorage.getItem('containsClass'));
+}
 const editTask = newFunction();
 export const bindTaskEvents = (taskListItem, checkBoxEventHandler) => {
   const checkBox = taskListItem.querySelector('input[type=checkbox]');
