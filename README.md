@@ -1,6 +1,6 @@
 # To Do List
 
-![Screenshot](https://user-images.githubusercontent.com/77942746/160253835-c04ca2a5-93b9-4d84-9a62-1daaa6921eeb.png)
+![Screenshot](https://user-images.githubusercontent.com/77942746/161405808-8c86e868-0659-4e25-ae50-c904cdfcfd1c.png)
 
 ## Built With
 
