@@ -1,27 +1,19 @@
-import './style.css';
-import './style.scss';
-import 'bootstrap';
-import addTask from './modules/addTask.js';
-import {
-  addButton,
-  incompleteTasksHolder,
-  bindTaskEvents,
-  taskCompleted,
-  completedTasksHolder,
-  taskIncomplete,
-} from './taskInput.js';
-import listItem from './listItem.js';
-import todoItems from './modules/task';
+import TodoList from './modules/todoList.js';
 
-addButton.addEventListener('click', addTask);
+import('./style.css');
 
-for (let i = 0; i < incompleteTasksHolder.children.length; i += 1) {
-  bindTaskEvents(incompleteTasksHolder.children[i], taskCompleted);
-}
+const todoListWrapper = document.getElementById('todo-list');
 
-for (let i = 0; i < completedTasksHolder.children.length; i += 1) {
-  bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
-}
+const todoList = new TodoList(todoListWrapper);
 
-listItem();
-todoItems();
+const form = document.getElementById('todo-form');
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  todoList.addNewItem(form.description.value);
+  form.description.value = '';
+});
+
+const clearAllCompletedBtn = document.getElementById('clear-all');
+clearAllCompletedBtn.addEventListener('click', () => {
+  todoList.removeAllCompleted();
+});
