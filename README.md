@@ -9,6 +9,7 @@ To do list project  from more than one project worked on doing list active that 
 - javascript
 - Visual studio and github
 - Webpack
+- npm
 
 ## Run project
 
