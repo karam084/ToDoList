@@ -8,6 +8,7 @@
 - javascript
 - Visual studio and github
 - Webpack
+- npm
 
 ## Run project
 
