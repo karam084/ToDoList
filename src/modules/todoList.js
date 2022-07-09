@@ -209,11 +209,10 @@ export default class TodoList {
     const completed = false;
 
     const newTodo = {
-      index: ibdex + 1,
+      index: index + 1,
       description,
       completed,
     };
-
     this.todos.push(newTodo);
     if (this.isStorageAvailable) {
       window.localStorage.setItem(this.storageName, JSON.stringify(this.todos));
