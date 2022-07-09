@@ -8,7 +8,6 @@ const createNewTaskElement = function todoItems(taskString) {
   const label = document.createElement('label');
   const editInput = document.createElement('input');
   const editButton = document.createElement('button');
-
   const deleteButton = document.createElement('button');
 
   label.innerText = taskString;
@@ -80,12 +79,11 @@ const addTask = function addTask() {
 
 const ajaxRequest = function clicks() {};
 addButton.onclick = addTask;
-addButton.addEventListener('click', addTask);
 addButton.addEventListener('click', ajaxRequest);
 
 for (let i = 0; i < incompleteTaskHolder.children.length; i += 1) {
-  bindTaskEvents(incompleteTaskHolder.children[i], taskCompleted);
+  bindTaskEvents(incompleteTaskHolder.children[i], taskIncomplete);
 }
 for (let i = 0; i < completedTasksHolder.children.length; i += 1) {
-  bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
+  bindTaskEvents(completedTasksHolder.children[i], taskCompleted);
 }
