@@ -31,7 +31,7 @@ export default class TodoList {
   sortList() {
     let sortedTodos = this.todos.sort((a, b) => a.index - b.index);
     sortedTodos = sortedTodos.map((todo, index) => ({
-      index,
+      index: index + 1,
       description: todo.description,
       completed: todo.completed,
     }));
@@ -209,7 +209,7 @@ export default class TodoList {
     const completed = false;
 
     const newTodo = {
-      index,
+      index: ibdex + 1,
       description,
       completed,
     };
