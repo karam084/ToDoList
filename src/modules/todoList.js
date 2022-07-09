@@ -105,7 +105,7 @@ export default class TodoList {
       dragIcon,
       todo,
       completionIcon,
-      description
+      description,
     );
   }
 
@@ -116,7 +116,7 @@ export default class TodoList {
       dragIcon,
       todo,
       completionIcon,
-      description
+      description,
     );
   }
 
@@ -127,7 +127,7 @@ export default class TodoList {
       dragIcon,
       todo,
       completionIcon,
-      description
+      description,
     );
   }
 
@@ -138,7 +138,7 @@ export default class TodoList {
       dragIcon,
       todo,
       completionIcon,
-      description
+      description,
     );
   }
 
@@ -169,7 +169,7 @@ export default class TodoList {
       dragIcon,
       todo,
       completionIcon,
-      description
+      description,
     );
   }
 
@@ -180,7 +180,7 @@ export default class TodoList {
     dragIcon,
     todo,
     completionIcon,
-    description
+    description,
   ) {
     deleteIcon.addEventListener('click', () => this.removeItem(li));
 
