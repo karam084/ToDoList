@@ -34,6 +34,7 @@ export default class TodoList {
       index: index + 1,
       description: todo.description,
       completed: todo.completed,
+
     }));
     return sortedTodos;
   }
@@ -63,7 +64,7 @@ export default class TodoList {
 
     this.newMethod(completionIcon, li);
 
-    const description = document.createElement('input');
+   const description = document.createElement('input');
     description.setAttribute('type', 'text');
     description.setAttribute('name', 'description');
     description.readOnly = true;
@@ -145,7 +146,6 @@ export default class TodoList {
   newMethod5(li, actionIcon, dragIcon, todo, completionIcon, description) {
     const deleteIcon = document.createElement('button');
     deleteIcon.setAttribute('type', 'button');
-    deleteIcon.classList.add('remove');
     deleteIcon.innerHTML = `
     <svg
       class="icon"
@@ -207,15 +207,16 @@ export default class TodoList {
   addNewItem(description) {
     const index = this.todos.length;
     const completed = false;
-
+     description;
     const newTodo = {
       index: index + 1,
       description,
       completed,
     };
+
     this.todos.push(newTodo);
     if (this.isStorageAvailable) {
-      window.localStorage.setItem(this.storageName, JSON.stringify(this.todos));
+      localStorage.setItem(this.storageName, JSON.stringify(this.todos.description));
     }
 
     this.addToPage(newTodo);
@@ -225,6 +226,7 @@ export default class TodoList {
     this.updateStorage();
     this.removeAllFromPage();
     this.addAllToPage();
+
   }
 
   removeItem(element) {
@@ -248,3 +250,4 @@ export default class TodoList {
     this.updateStorage();
   }
 }
+
