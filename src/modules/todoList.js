@@ -64,7 +64,7 @@ export default class TodoList {
 
     this.newMethod(completionIcon, li);
 
-   const description = document.createElement('input');
+    const description = document.createElement('input');
     description.setAttribute('type', 'text');
     description.setAttribute('name', 'description');
     description.readOnly = true;
@@ -207,7 +207,6 @@ export default class TodoList {
   addNewItem(description) {
     const index = this.todos.length;
     const completed = false;
-     description;
     const newTodo = {
       index: index + 1,
       description,
@@ -226,7 +225,6 @@ export default class TodoList {
     this.updateStorage();
     this.removeAllFromPage();
     this.addAllToPage();
-
   }
 
   removeItem(element) {
@@ -250,4 +248,3 @@ export default class TodoList {
     this.updateStorage();
   }
 }
-
