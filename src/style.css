@@ -16,8 +16,8 @@ a {
 }
 
 .icon {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 20px;
+  height: 20px;
 }
 
 button {
@@ -137,7 +137,8 @@ body {
 }
 
 #todo-list li.todo.completed .completionIcon > svg:first-child {
-  margin-left: -1.25rem;
+  margin-left: -2.25rem;
+  margin-top: -64px;
 }
 
 #todo-list li.todo.completed .completionIcon > svg:last-child {
@@ -190,4 +191,8 @@ body {
   background-color: #eee;
   border: 0;
   padding: 1rem;
+}
+
+.remove {
+  display: flex;
 }
