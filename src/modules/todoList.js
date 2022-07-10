@@ -34,6 +34,7 @@ export default class TodoList {
       index: index + 1,
       description: todo.description,
       completed: todo.completed,
+
     }));
     return sortedTodos;
   }
@@ -206,7 +207,6 @@ export default class TodoList {
   addNewItem(description) {
     const index = this.todos.length;
     const completed = false;
-
     const newTodo = {
       index: index + 1,
       description,
@@ -215,7 +215,7 @@ export default class TodoList {
 
     this.todos.push(newTodo);
     if (this.isStorageAvailable) {
-      window.localStorage.setItem(this.storageName, JSON.stringify(this.todos));
+      localStorage.setItem(this.storageName, JSON.stringify(this.todos.description));
     }
 
     this.addToPage(newTodo);
